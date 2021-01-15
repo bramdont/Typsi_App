@@ -13,6 +13,8 @@
 		D219857825B1253D00C62BA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D219857625B1253D00C62BA6 /* Main.storyboard */; };
 		D219857A25B1254300C62BA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D219857925B1254300C62BA6 /* Assets.xcassets */; };
 		D219857D25B1254300C62BA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D219857B25B1254300C62BA6 /* LaunchScreen.storyboard */; };
+		D24F7E3C25B1360000954B42 /* Split.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F7E3B25B1360000954B42 /* Split.swift */; };
+		D24F7E4225B1373800954B42 /* SplitCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F7E4125B1373800954B42 /* SplitCalculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		D219857925B1254300C62BA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D219857C25B1254300C62BA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D219857E25B1254300C62BA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D24F7E3B25B1360000954B42 /* Split.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Split.swift; sourceTree = "<group>"; };
+		D24F7E4125B1373800954B42 /* SplitCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +62,39 @@
 			children = (
 				D219857025B1253D00C62BA6 /* AppDelegate.swift */,
 				D219857225B1253D00C62BA6 /* SceneDelegate.swift */,
-				D219857425B1253D00C62BA6 /* ViewController.swift */,
-				D219857625B1253D00C62BA6 /* Main.storyboard */,
+				D24F7E3E25B1360500954B42 /* Model */,
+				D219858525B125B000C62BA6 /* View */,
+				D219858625B125BB00C62BA6 /* Controller */,
 				D219857925B1254300C62BA6 /* Assets.xcassets */,
 				D219857B25B1254300C62BA6 /* LaunchScreen.storyboard */,
 				D219857E25B1254300C62BA6 /* Info.plist */,
 			);
 			path = "Typsi App";
+			sourceTree = "<group>";
+		};
+		D219858525B125B000C62BA6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D219857625B1253D00C62BA6 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D219858625B125BB00C62BA6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D219857425B1253D00C62BA6 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D24F7E3E25B1360500954B42 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D24F7E3B25B1360000954B42 /* Split.swift */,
+				D24F7E4125B1373800954B42 /* SplitCalculator.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +168,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D219857525B1253D00C62BA6 /* ViewController.swift in Sources */,
+				D24F7E4225B1373800954B42 /* SplitCalculator.swift in Sources */,
 				D219857125B1253D00C62BA6 /* AppDelegate.swift in Sources */,
+				D24F7E3C25B1360000954B42 /* Split.swift in Sources */,
 				D219857325B1253D00C62BA6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
