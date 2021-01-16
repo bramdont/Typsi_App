@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SplitViewController: UIViewController {
 
     @IBOutlet weak var billTotal: UITextField!
     @IBOutlet weak var splitQuantity: UILabel!
@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     
     var quantity: Int = 2
     var tip: Int = 0
+    var total: Float = 0.0
+    var result: Float = 0.0
     
     var calculator = SplitCalculator()
     
@@ -38,11 +40,19 @@ class ViewController: UIViewController {
     }
     
     @IBAction func Calculate(_ sender: UIButton) {
-        let total = Float(grandTotal.text ?? "0.0")
-        calculator.calculate(total: total!, tip: tip, quantity: quantity)
+        total = Float(grandTotal.text ?? "0.0")!
+        calculator.calculate(total: total, tip: tip, quantity: quantity)
         
-        print(calculator.getSplitResult())
-        
+        result = calculator.getSplitResult()
+       performSegue(withIdentifier: "goToResultScreen", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToResultScreen"{
+            let split = Split(grandTotal: total, quantity: quantity, tip: tip, value: result)
+            let destinationVC = segue.destination as! ResultViewController
+            destinationVC.splitValues = split
+        }
     }
 }
 

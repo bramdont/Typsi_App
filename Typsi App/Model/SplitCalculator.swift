@@ -17,8 +17,8 @@ struct SplitCalculator {
         split = Split(grandTotal: total, quantity: quantity, tip: tip, value: result)
     }
     
-    func getSplitResult() -> String {
-        let oneDecimalPlace = String(format: "%.1f", split?.value ?? 0.0)
-        return oneDecimalPlace
+    func getSplitResult() -> Float {
+        let splitResult = split?.value ?? 0.0
+        return splitResult
     }
 }
