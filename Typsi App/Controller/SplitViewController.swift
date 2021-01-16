@@ -9,9 +9,11 @@ import UIKit
 
 class SplitViewController: UIViewController {
 
-    @IBOutlet weak var billTotal: UITextField!
     @IBOutlet weak var splitQuantity: UILabel!
     @IBOutlet weak var grandTotal: UITextField!
+    @IBOutlet weak var zeroPctButton: UIButton!
+    @IBOutlet weak var tenPctButton: UIButton!
+    @IBOutlet weak var twentyPctButton: UIButton!
     
     var quantity: Int = 2
     var tip: Int = 0
@@ -22,7 +24,7 @@ class SplitViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        grandTotal.endEditing(false)
     }
 
     @IBAction func tipSelected(_ sender: UIButton) {
@@ -31,6 +33,7 @@ class SplitViewController: UIViewController {
     }
     
     @IBAction func changeSplitQuantity(_ sender: UIStepper) {
+        grandTotal.endEditing(false)
         quantity = Int(sender.value)
         updateUI()
     }
